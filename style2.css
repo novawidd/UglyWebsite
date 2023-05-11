@@ -1,0 +1,164 @@
+@import url('https://fonts.cdnfonts.com/css/ransom-note');
+@import url('https://fonts.cdnfonts.com/css/partita');
+@import url('https://fonts.cdnfonts.com/css/innocent-bystander');
+
+* {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    box-sizing: border-box;
+} 
+
+html {
+    font-size: 16px;
+    background-image: radial-gradient(circle, #5C4033, blue, #654321, yellow,#462403 )
+}
+body {
+    margin-left: 7%;
+    margin-right: 7%;
+    background-color: rgba(192, 192, 192, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1#headline {
+    font-size: 80px;
+    margin-top: 0.15em;
+    margin-bottom: 0.15em;
+    color: #505355;
+    border: dotted 25px cyan;
+}
+
+h2.meatfact{
+    font-family: 'Nosifer Caps', sans-serif;
+    font-size:30px;
+    line-height: 1.45em;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    max-width: 400px;
+}
+
+h3 {
+    background-image: url(/images/meatagain.jpg);
+}
+
+#headline{
+background-image: url(/images/istockphoto-1200498591-612x612.jpg);
+background-size:85px;
+}
+
+
+.student-gray {
+    color: #f5f5a7;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+#student-picture img{
+    border-radius: 50%;
+}
+#main-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"headline headline student-picture" "student-quote studernt-quote student-picture"
+                    "student-profile student-profile student-contact" "experience-grid experience-grid experience-grid";
+                    row-gap: 20px;
+                    column-gap: 50px;
+                    align-items: center;
+}
+#headline{
+    grid-area: headline;
+}
+
+#student-picture{
+    grid-area: student-picture;
+    text-align: center;
+}
+
+#student-quote{
+    grid-area: student-picture;
+}
+
+#student-profile{
+    grid-area: student-profile;
+}
+
+#student-contact{
+    grid-area: student-contact;
+    text-align: center;
+}
+
+#experience-grid{
+    grid-area: experience-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "experience-code experience-code" "experience-database experience-database" "experience-web experience-design";
+    row-gap: 20px;
+    column-gap: 50px;
+}
+
+#experience-code{
+    grid-area: experience-code;
+}
+
+#experience-database{
+    grid-area: experience-database;
+}
+
+#experience-web{
+    grid-area: experience-web;
+}
+
+#experience-design{
+    grid-area: experience-design;
+}
+.whitemeat {
+    font-family: 'RansomNote', sans-serif;
+    font-size: 60px;
+    color: #46ff65;
+    background-image:url(images/download.jpg);
+    background-size: 200px;
+}
+.badmeat{
+    font-family: 'Partita', sans-serif;
+    font-size: 45px;
+    color:#FFA500;
+    background-color:#035c03;
+}
+h3{
+    font-family: 'Innocent bystander', sans-serif;
+    font-size: 90px;
+    color: #ff33e4;
+}
+
+@media screen and (max-width: 1024px){
+    #main-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:"headline headline" "student-quote student-pcture" "student-quote student-contact" "student-profile student-profile" "experience-grid experience-grid";
+        row-gap: 20px;
+        column-gap: 35px;
+    }
+    #experience-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "experience-code experience-web" "experience-database experience-design";
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    #main-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "headline" "student-picture" "student-contact" "student-quote" "student-profile" "experience-grid";
+        row-gap: 20px;
+        column-gap: 35px;
+    }
+    #experience-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "experience-code" "experience-web" "experience-database" "experience-design";
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+}

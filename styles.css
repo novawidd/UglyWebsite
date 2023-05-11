@@ -1,0 +1,219 @@
+@import url('https://fonts.cdnfonts.com/css/bleeding-cowboys');
+@import url('https://fonts.cdnfonts.com/css/cyberpunk-is-not-dead');
+@import url('https://fonts.cdnfonts.com/css/jokerman');
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right,#fe01b1,#73a213 , #7b5804);
+}
+#hero footer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Bleeding Cowboys', sans-serif;
+  color: #ec68e4;
+  
+}
+#featured section{
+  display:flex;
+  font-family: 'Cyberpunk Is Not Dead', sans-serif;
+  font-size: 8px;
+  font-weight: 300;
+}
+#featured section div{
+display: flex;
+justify-content: center;
+}
+
+.head{
+  font-family:'Bleeding Cowboys', sans-serif;
+  font-size: 120px; 
+}
+
+#all-items section{
+  display:flex;
+  flex-direction: column;
+
+}
+#all-items section article{
+display:flex;
+flex-direction: row;
+}
+
+#all-items section article:last-child{
+  display:flex;
+  flex-direction: row-reverse;
+  }
+
+  #all-items section article{
+flex-basis: 80%;
+  }
+
+  #all-items section article:last-child div:last-child{
+    flex-basis: 85%;
+  }
+
+#all-items section article:first-child div:last-child{
+    flex-basis: 80%;
+  } 
+
+
+/***** enter flexbox CSS above this line *****/
+.lady{
+  animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 80vw;
+  font-family: Tahoma, sans-serif;
+}
+
+#hero {
+  font-family: 'Shadows Into Light', cursive;
+  ;
+  font-size: 3vw;
+  color: black;
+  width: 80vw;
+}
+
+#hero img {
+  width: 80vw;
+}
+
+#hero footer {
+  height: 80px;
+  padding: 0 15px;
+  margin-top: -23px;
+  background-color:#FF10F0;
+}
+
+#hero>footer a,
+#hero>footer a:visited,
+#hero>footer a:active {
+  text-decoration: none;
+  color: #ec68e4;
+}
+
+#hero>footer a:hover {
+  background-color: slategray;
+}
+
+#featured {
+  font-family: Tahoma, sans-serif;
+  color: #f5f5a7;
+  margin-top: 25px;
+}
+
+
+#featured>header,
+#all-items>header {
+  font-family: 'Nosifer Caps', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #46ff65;
+  margin: 50px;
+}
+
+#featured section article:nth-child(even) {
+  border-left: 20px solid  yellow;
+  border-right: 20px solid #79560a;
+}
+
+#featured section article div {
+  padding: 40px;
+  max-height: 10vw;
+  background-color: #996b07;
+  color: #673a3f;
+  font-size: 0.75vw;
+}
+
+#featured section article p {
+  padding: 20px;
+}
+
+#featured section article header,
+#all-items section article div header {
+  font-weight: bold;
+  margin: 15px;
+}
+
+#all-items {
+  margin-top: 25px;
+}
+
+#all-items section article {
+  color: rgb(255, 50, 50);
+  background-color: rgb(255, 50, 50);
+}
+
+#all-items section article div:first-child {
+  font-size: .5vw;
+  margin: 10px;
+  padding: 30px;
+  border-radius: 10vw;
+  width: 3vw;
+  height: 3vw;
+  background-color: rgb(22, 22, 255);
+}
+
+#all-items section article:nth-child(even) div:last-child {
+  text-align: right;
+}
+.meat1{
+  font-family: 'Jokerman', sans-serif;
+  color: #696e04;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/images/images.jpg);
+}
+.meat2{
+  font-family: 'Jokerman', sans-serif;
+  color: #5e6303;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/images/raw-chicken-meat-background-texture_176402-9428.jpg);
+}
+
+@media only screen and (max-width: 550px) {
+  #hero footer {
+    margin-top: -5px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  #hero,
+  #hero img {
+    width: 100vw;
+  }
+
+  #featured>header,
+  #all-items>header {
+    text-align: center;
+  }
+
+}
